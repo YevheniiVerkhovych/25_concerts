@@ -11,7 +11,7 @@ public class Main {
     public static void main(String[] args) throws ParseException {
 
         View view = new View();
-        Model model = new Model(view);
+        Model model = new Model();
         Controller controller = new Controller(view, model);
         controller.process();
 

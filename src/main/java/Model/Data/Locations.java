@@ -11,6 +11,7 @@ public enum Locations {
 
 
     private String locationName;
+
     private int hallVolume;
 
 
@@ -27,5 +28,7 @@ public enum Locations {
     public int getHallVolume() {
         return this.hallVolume;
     }
+
+
 
 }

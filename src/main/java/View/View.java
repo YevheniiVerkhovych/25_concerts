@@ -13,5 +13,5 @@ public class View {
             ResourceBundle.getBundle(
                     MESSAGES_BUNDLE_NAME,
                     new Locale("ru", "RU"));  // Ru
-                    //new Locale("en"));        // En
+                  //  new Locale("en"));        // En
 }

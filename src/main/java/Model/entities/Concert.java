@@ -1,31 +1,31 @@
 package Model.entities;
 
+import Controller.Controller_Utilities;
 import Model.Data.Genre;
 import Model.Data.Group;
 import Model.Data.Locations;
-import Model.Model;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
 
-public class Concert {
+public class Concert  {
 
     private Date date;
     private Locations locations;
     private int price;
     private Genre genre;
     private Group group;
-    private boolean[] seats;// = new boolean[locations.getHallVolume()];
+    private int seats;
 
     public Concert(String date, Locations locations, int price, Genre genre, Group group) throws ParseException {
-        this.date = Model.dateConvert(date);
+        this.date = Controller_Utilities.dateConvert(date);
         this.locations = locations;
         this.price = price;
         this.genre = genre;
         this.group = group;
-        this.seats = new boolean[locations.getHallVolume()];
+        this.seats = locations.getHallVolume();
     }
 
     public Date getDate() {
@@ -33,44 +33,33 @@ public class Concert {
     }
 
     public void setDate(String date) throws ParseException {
-        this.date = Model.dateConvert(date);
+        this.date = Controller_Utilities.dateConvert(date);
     }
 
-    public Locations getLocations() {
-        return locations;
-    }
-
-    public void setLocations(Locations locations) {
-        this.locations = locations;
+    public String getLocations() {
+        return locations.getLocationName();
     }
 
     public int getPrice() {
         return price;
     }
 
-    public void setPrice(int price) {
-        this.price = price;
+    public String getGenre() {
+        return genre.getGenreName();
     }
 
-    public Genre getGenre() {
-        return genre;
+    public String getGroup() {
+        return group.getGroupName();
     }
 
-    public void setGenre(Genre genre) {
-        this.genre = genre;
-    }
-
-    public Group getGroup() {
-        return group;
-    }
-
-    public void setGroup(Group group) {
-        this.group = group;
-    }
-
-    public boolean[] getSeats() {
+    public int getSeats() {
         return seats;
     }
+
+    public void setSeats(int seats) {
+        this.seats = seats;
+    }
+
 
     @Override
     public String toString() {
@@ -84,9 +73,6 @@ public class Concert {
                 " " + genre.getGenreName() +
                 " " + group.getGroupName();
     }
-
-
-
 
 
 }
