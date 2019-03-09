@@ -7,9 +7,9 @@ import static View.View.bundle;
 
 public enum Genre {
 
-        ROCK(bundle.getString   (ROCK_NAME)),
-        JAZZ(bundle.getString   (JAZZ_NAME)),
-        POP(bundle.getString    (POP_NAME)),
+        ROCK(bundle.getString(ROCK_NAME)),
+        JAZZ(bundle.getString(JAZZ_NAME)),
+        POP(bundle.getString(POP_NAME)),
         TECHNO(bundle.getString (TECHNO_NAME));
 
         private String genreName;
@@ -19,9 +19,7 @@ public enum Genre {
 
         }
 
-    public String getGenreName(){
-            return this.genreName;
-    }
+    public String getGenreName(){ return this.genreName; }
 
 
 }
