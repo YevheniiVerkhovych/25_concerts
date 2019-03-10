@@ -13,12 +13,13 @@ Controller_Utilities controller_utilities = new Controller_Utilities();
         this.view = view;
         this.model = model;
     }
-
-public void process() throws ParseException {
+//concert schedule show utility
+    public void process() throws ParseException {
     model.dataBaseFilling();
     controller_utilities.showSortedLists();
-}
+    controller_utilities.showFilteredList();
+    controller_utilities.ticketsOrdering();
 
-
+    }
 
 }

@@ -9,11 +9,8 @@ public enum Locations {
     POLTAVA(bundle.getString(POLTAVA_NAME),250),
     HARKOV(bundle.getString(HARKOV_NAME),400);
 
-
     private String locationName;
-
     private int hallVolume;
-
 
     Locations(String locationName, int hallVolume) {
         this.locationName = locationName;
@@ -28,7 +25,5 @@ public enum Locations {
     public int getHallVolume() {
         return this.hallVolume;
     }
-
-
 
 }
